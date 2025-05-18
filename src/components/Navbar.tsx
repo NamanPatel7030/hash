@@ -5,7 +5,6 @@ import {
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
@@ -38,8 +37,15 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Login</NavbarButton>
-            <NavbarButton variant="primary">Book a call</NavbarButton>
+            
+            <a
+              href="#book-a-call"
+              className="text-neutral-600 dark:text-neutral-300"
+            >
+              <button className="bg-gradient-to-r from-amber-400 to-amber-600 text-white rounded-full px-4 py-2 transition duration-300 ease-in-out hover:bg-gradient-to-l">
+              Book a call
+              </button>
+            </a>
           </div>
         </NavBody>
 
@@ -67,22 +73,7 @@ export function NavbarDemo() {
                 <span className="block">{item.name}</span>
               </a>
             ))}
-            <div className="flex w-full flex-col gap-4">
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Login
-              </NavbarButton>
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Book a call
-              </NavbarButton>
-            </div>
+            
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
