@@ -16,7 +16,7 @@ const AnimatedLogoTitleBar = () => {
         Trusted by teams at over <span className="hidden sm:inline">40+ of the </span>{`world's leading organizations`}
       </h2>
       
-      {/* Logo container */}
+      {/* Logo containercv */}
       <div className="overflow-hidden w-full relative">
         <div className="flex space-x-6 md:space-x-12 items-center animate-marquee">
           {/* Double the logos to create a seamless loop */}
